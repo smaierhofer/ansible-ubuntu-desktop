@@ -1,7 +1,8 @@
 ---
 
-- name: Install skype
+- name: Install shotcut
   become: true
   snap:
-    name: skype
+    name: shotcut
     classic: true
+

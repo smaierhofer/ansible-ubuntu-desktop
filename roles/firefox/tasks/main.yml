@@ -1,8 +1,6 @@
 ---
 
 - name: Install Firefox
-  apt: 
-    pkg: firefox
-    state: latest
-    update_cache: yes
-    cache_valid_time: "{{ aptcachetime }}"
+  become: true
+  snap:
+    name: firefox

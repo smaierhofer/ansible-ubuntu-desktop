@@ -1,0 +1,6 @@
+---
+
+- name: Install Inkscape
+  become: true
+  snap:
+    name: inkscape

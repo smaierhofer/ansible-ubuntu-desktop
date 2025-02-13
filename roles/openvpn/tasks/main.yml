@@ -1,0 +1,9 @@
+---
+
+- name: Install openvpn
+  apt:
+    pkg: ["openvpn"]
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
+

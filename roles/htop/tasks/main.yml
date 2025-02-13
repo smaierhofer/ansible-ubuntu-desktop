@@ -1,0 +1,6 @@
+---
+
+- name: Install htop
+  become: true
+  snap:
+    name: htop

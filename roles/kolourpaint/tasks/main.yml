@@ -1,0 +1,6 @@
+---
+
+- name: Install kolourpaint
+  become: true
+  snap:
+    name: kolourpaint

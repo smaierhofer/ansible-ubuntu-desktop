@@ -1,0 +1,6 @@
+---
+
+- name: Install JOSM
+  become: true
+  snap:
+    name: josm

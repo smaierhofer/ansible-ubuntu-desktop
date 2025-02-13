@@ -1,0 +1,6 @@
+---
+
+- name: Install JabRef
+  become: true
+  snap:
+    name: jabref
