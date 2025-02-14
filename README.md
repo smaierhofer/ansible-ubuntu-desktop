@@ -1,29 +1,26 @@
-# Ansible Ubuntu setup
-Ansible roles to setup Ubuntu desktop. This playbook is focused on quickly deploying a "ready to use" Ubuntu Desktop.
+# Ansible Ubuntu Setup
+Ansible roles to set up Ubuntu Desktop.
+This playbook is focused on quickly deploying a "ready to use" Ubuntu Desktop.
+This repository is a fork of [ansible-ubuntu-desktop](https://github.com/sys0dm1n/ansible-ubuntu-desktop)
+with some modifications to suit my needs.
 
-
-## Requirements
-- Git
-- Ansible 2+ (automatically installed from [Ansible offical PPA](https://launchpad.net/~ansible/+archive/ubuntu/ansible) with the provided install.sh script)
-
-
-## Installation
-First, you need to install Git and Ansible :
-```
-$ sudo apt-get install git
-$ git clone https://github.com/sys0dm1n/ansible-ubuntu-desktop.git
-$ cd ansible-ubuntu-desktop
-$ bash ./install.sh
+## Usage
+First, you need to install Ansible :
+```bash
+  pipx install --include-deps ansible
 ```
 
-Then you need to copy the `group_vars/all.yml` to `group_vars/local.yml` and customize which roles suit your needs. All roles except `locales`,`common`, and `desktop` are disabled by default.
+Then you need to copy the `group_vars/all.yml` to `group_vars/local.yml` and customize which roles suit your needs.
+All roles except `locales`,`common`, and `desktop` are disabled by default.
 
-Run `ansible-playbook ansible-desktop.yml --ask-become-pass` and enter your sudo password to run the playbook
+Run `ansible-playbook ansible-desktop.yml --ask-become-pass` -f numThreads and enter your sudo password to run the playbook
 
-Optionaly you can run just some of the tags like:
-`ansible-playbook ansible-desktop.yml --ask-become-pass --tags=common,locales`
+Optionally, you can run just some of the tags like:
+`ansible-playbook ansible-desktop.yml --ask-become-pass --tags=common,locales` -f numThreads
 
-Tags are named the same as role dirs. If a role is in a sub dir then the tag for that specific role is sepparated with a colon like: `aws:cli`. But you can also use `aws` and that should install all the roles under the `aws` dir.
+Tags are named the same as role dirs.
+If a role is in a sub dir then the tag for that specific role is sepparated with a colon like: `aws:cli`.
+However, you can also use `aws` and that should install all the roles under the `aws` dir.
 
 ## Roles included
 
@@ -43,8 +40,8 @@ Tags are named the same as role dirs. If a role is in a sub dir then the tag for
 | chromium                | Install [Chromium](https://www.chromium.org/). May also install plugins and set policies |
 | desktop                 | Install a lot of usefull packages (meld, tilda, vlc, xclip) |
 | discord                 | Install [Discord](https://discord.com/download) chat app.|
-| filezilla               | Install [Filezilla](https://filezilla-project.org/) (no particular settings, basic installation) | 
-| firefox                 | Install [Firefox](https://www.mozilla.org/firefox/) (no particular settings, basic installation) | 
+| filezilla               | Install [Filezilla](https://filezilla-project.org/) (no particular settings, basic installation) |
+| firefox                 | Install [Firefox](https://www.mozilla.org/firefox/) (no particular settings, basic installation) |
 | gimp                    | Install [Gimp](https://www.gimp.org/) and some minor settings |
 | gitg                    | Install [Gitg](https://wiki.gnome.org/Apps/Gitg) a graphical user interface for git. |
 | gnome-encfs-manager     | Install [gnome-encfs-manager](https://moritzmolch.com/apps/gencfsm.html) an easy to use manager and mounter for encfs stashes. |
@@ -87,7 +84,7 @@ Tags are named the same as role dirs. If a role is in a sub dir then the tag for
 | python                  | Install python language |
 | ruby                    | Install ruby language |
 | kubectl                 | Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) |
-| mysql-workbench         | Install [MySQL WorkBench](https://www.mysql.fr/products/workbench/) from online deb file| 
+| mysql-workbench         | Install [MySQL WorkBench](https://www.mysql.fr/products/workbench/) from online deb file|
 | minikube                | Install [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)  |
 | snapd                   | Install [snapd](https://snapcraft.io/snapd) a service that manages installed snaps (app packages for Linux) |
 | ssh                     | Install [OpenSSH Server](http://www.openssh.com/) |
@@ -96,14 +93,6 @@ Tags are named the same as role dirs. If a role is in a sub dir then the tag for
 | tgenv                   | Install [tgenv](https://github.com/cunymatthieu/tgenv) terragrunt version manager inspired by tfenv |
 | tmux                    | Install [tmux](https://github.com/tmux/tmux/wiki) tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more. |
 | vagrant                 | Install [Vagrant](https://www.vagrantup.com/) from online deb file|
-| virtualbox              | Install [VirtualBox](https://www.virtualbox.org/) from VirtualBox APT repositories | 
+| virtualbox              | Install [VirtualBox](https://www.virtualbox.org/) from VirtualBox APT repositories |
 | zsh                     | Install [zsh](https://www.zsh.org/) shell and [oh-my-zsh](https://ohmyz.sh/) framework for managing your Zsh configuration |
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request

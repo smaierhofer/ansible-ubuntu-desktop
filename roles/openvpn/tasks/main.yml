@@ -1,9 +1,13 @@
 ---
 
 - name: Install openvpn
+  become: yes
   apt:
-    pkg: ["openvpn"]
-    state: latest
-    update_cache: yes
-    cache_valid_time: "{{ aptcachetime }}"
+    name: openvpn
+    state: present
 
+- name: Install easy-rsa
+  become: yes
+  apt:
+    name: easy-rsa
+    state: present

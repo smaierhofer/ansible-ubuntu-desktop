@@ -1,10 +1,41 @@
 ---
 
-- name: Install clang versions 15 to 19
+- name: Install clang 15
   apt:
-    name: "^clang-(15|16|17|18|19)$"
+    name: clang-15
     state: present
     install_recommends: no
     update_cache: true
     cache_valid_time: "{{ aptcachetime }}"
 
+- name: Install clang 16
+  apt:
+    name: clang-16
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install clang 17
+  apt:
+    name: clang-17
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install clang 18
+  apt:
+    name: clang-18
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install clang 19
+  apt:
+    name: clang-19
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"

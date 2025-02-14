@@ -1,38 +1,6 @@
 ---
-
-- name: Ensure curl is installed
-  apt:
-    name: curl
-    state: present
-
-- name: Install Rustup
+- name: Install Rust
   shell: |
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   args:
-    creates: /home/{{ ansible_user }}/.cargo/bin/rustup
-
-- name: Source Cargo environment
-  shell: echo 'source $HOME/.cargo/env' >> /home/{{ ansible_user }}/.bashrc
-  args:
-    creates: /home/{{ ansible_user }}/.cargo/env
-
-- name: Ensure Cargo is in PATH
-  environment:
-    PATH: "{{ ansible_env.PATH }}:/home/{{ ansible_user }}/.cargo/bin"
-  shell: source /home/{{ ansible_user }}/.cargo/env
-
-- name: Update Rust and install components
-  shell: |
-    rustup update
-    rustup component add rustfmt
-    rustup component add clippy
-  environment:
-    PATH: "{{ ansible_env.PATH }}:/home/{{ ansible_user }}/.cargo/bin"
-
-- name: Install popular Rust tools
-  shell: |
-    cargo install ripgrep
-    cargo install fd-find
-    cargo install exa
-  environment:
-    PATH: "{{ ansible_env.PATH }}:/home/{{ ansible_user }}/.cargo/bin"
+    executable: /bin/bash
