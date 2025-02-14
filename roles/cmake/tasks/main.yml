@@ -1,8 +1,8 @@
 ---
 
-- name: Install pycharm-professional
+- name: Install CMake
   become: true
   snap:
-    name: pycharm-professional
+    name: cmake
     classic: true
 

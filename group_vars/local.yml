@@ -14,6 +14,7 @@ barrier_enabled:              no
 bitwarden_enabled:            yes
 chrome_enabled:               yes
 chromium_enabled:             no
+clang_enabled:                yes
 clion_enabled:                yes
 cmake_enabled:                yes
 common_git_enabled:           no
@@ -26,6 +27,7 @@ doublecmd_enabled:            no
 envchain_enabled:             no
 filezilla_enabled:            no
 firefox_enabled:              yes
+gcc_enabled:                  yes
 gimp_enabled:                 yes
 gitg_enabled:                 no
 gnome_encfs_manager_enabled:  no
@@ -64,6 +66,7 @@ remmina_enabled:              no
 ruby_enabled:                 no
 ruby_rbenv_enabled:           no
 ruby_landscape_enabled:       no
+rust_enabled:                 yes
 scribus_enabled:              no
 shutter_enabled:              no
 signal_enabled:               no
@@ -96,8 +99,8 @@ zoom_enabled:                 yes
 
 # http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
 aptcachetime: 3600
-locale: "en_US.UTF-8"
-timezone: "Asia/Beirut"
+locale: "de_DE.UTF-8"
+timezone: "Europe/Berlin"
 chromium:
   set_default: false
   policy: false

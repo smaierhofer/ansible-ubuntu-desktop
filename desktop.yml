@@ -80,16 +80,36 @@
       tags:
         - guake
       when: guake_enabled | bool
+    - role: inkscape
+      become: true
+      tags:
+        - inkscape
+      when: inkscape_enabled | bool
     - role: indicator-sysmonitor
       become: true
       tags:
         - indicator-sysmonitor
       when: indicator_sysmonitor_enabled | bool
+    - role: jabref
+      become: true
+      tags:
+        - jabref
+      when: jabref_enabled | bool
+    - role: josm
+      become: true
+      tags:
+        - true
+      when: josm_enabled | bool
     - role: handbrake
       become: true
       tags:
         - handbrake
       when: handbrake_enabled | bool
+    - role: kolourpaint
+      become: true
+      tags:
+        - kolourpaint
+      when: kolourpaint_enabled | bool
     - role: ledger-live
       tags:
         - ledger-live
@@ -118,6 +138,10 @@
       tags:
         - noisetorch
       when: noisetorch_enabled | bool
+    - role: openvpn
+      tags:
+        - openvpn
+      when: openvpn_enabled | bool
 #    - role: notify-osd
 #      become: true
 #      tags:
@@ -154,6 +178,14 @@
       tags:
         - skype
       when: skype_enabled | bool
+    - role: shotcut
+      tags:
+        - shotcut
+      when: shotcut_enabled | bool
+    - role: spotify
+      tags:
+        - spotify
+      when: spotify_enabled | bool
     - role: solaar
       become: true
       tags:
@@ -198,3 +230,7 @@
       tags:
         - winbox
       when: winbox_enabled | bool
+    - role: zoom
+      tags:
+        - zoom
+      when: zoom_enabled | bool

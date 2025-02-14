@@ -14,6 +14,7 @@ barrier_enabled:              no
 bitwarden_enabled:            no
 chrome_enabled:               no
 chromium_enabled:             no
+clang_enabled:                no
 clion_enabled:                no
 cmake_enabled:                no
 common_git_enabled:           no
@@ -26,6 +27,7 @@ doublecmd_enabled:            no
 envchain_enabled:             no
 filezilla_enabled:            no
 firefox_enabled:              no
+gcc_enabled:                  no
 gimp_enabled:                 no
 gitg_enabled:                 no
 gnome_encfs_manager_enabled:  no
@@ -64,6 +66,7 @@ remmina_enabled:              no
 ruby_enabled:                 no
 ruby_rbenv_enabled:           no
 ruby_landscape_enabled:       no
+rust_enabled:                 no
 scribus_enabled:              no
 shutter_enabled:              no
 signal_enabled:               no
