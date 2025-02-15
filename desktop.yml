@@ -215,6 +215,11 @@
       tags:
         - teamviewer
       when: teamviewer_enabled | bool
+    - role: texstudio
+      become: true
+      tags:
+        - texstudio
+      when: texstudio_enabled | bool
     - role: thunderbird
       become: true
       tags:

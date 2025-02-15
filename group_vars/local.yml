@@ -81,6 +81,7 @@ sublime3_enabled:             no
 sunflower_enabled:            no
 syncthing_enabled:            no
 teamviewer_enabled:           no
+texstudio_enabled:            yes
 tfenv_enabled:                no
 tgenv_enabled:                no
 thunderbird_enabled:          yes

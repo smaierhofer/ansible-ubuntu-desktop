@@ -1,0 +1,17 @@
+---
+
+- name: Install TexStudio
+  become: true
+  apt:
+    pkg: ["texstudio"]
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install texlive
+  become: true
+  apt:
+    pkg: ["texlive-full"]
+    state: latest
+    update_cache: yes
+    cache_valid_time: "{{ aptcachetime }}"
