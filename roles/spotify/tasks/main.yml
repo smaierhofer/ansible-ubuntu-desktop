@@ -1,7 +1,8 @@
 ---
 
-- name: Install skype
+- name: Install spotify
   become: true
   snap:
-    name: skype
+    name: spotify
     classic: true
+

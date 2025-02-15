@@ -1,7 +1,8 @@
 ---
 
-- name: Install skype
+- name: Install CMake
   become: true
   snap:
-    name: skype
+    name: cmake
     classic: true
+

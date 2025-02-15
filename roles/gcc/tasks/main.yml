@@ -1,0 +1,81 @@
+---
+
+- name: Install gcc-10
+  apt:
+    name: gcc-10
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install g++-10
+  apt:
+    name: g++-10
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install gcc-11
+  apt:
+    name: gcc-11
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install g++-11
+  apt:
+    name: g++-11
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install gcc-12
+  apt:
+    name: gcc-12
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install g++-12
+  apt:
+    name: g++-12
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install gcc-13
+  apt:
+    name: gcc-13
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install g++-13
+  apt:
+    name: g++-13
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install gcc-14
+  apt:
+    name: gcc-14
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install g++-14
+  apt:
+    name: g++-14
+    state: present
+    install_recommends: no
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"

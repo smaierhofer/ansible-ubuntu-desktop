@@ -1,7 +1,8 @@
 ---
 
-- name: Install skype
+- name: Install clion
   become: true
   snap:
-    name: skype
+    name: clion
     classic: true
+

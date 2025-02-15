@@ -17,10 +17,8 @@ common:
     - fdupes
     - ftp-ssl
     - gawk
-    - gcc
     - grep
     - gzip
-    - htop
     - httping
     - iftop
     - imagemagick
@@ -51,3 +49,10 @@ common:
     - wget
     - whois
     - zip
+    - pkg-config
+    - ninja-build
+    - ca-certificates
+    - libomp-dev
+    - libboost-all-dev
+    - cppcheck
+    - gcovr

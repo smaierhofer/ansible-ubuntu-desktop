@@ -1,0 +1,6 @@
+- name: Install zoom
+  become: true
+  snap:
+    name: zoom-client
+    classic: true
+

@@ -1,0 +1,13 @@
+---
+
+- name: Install openvpn
+  become: yes
+  apt:
+    name: openvpn
+    state: present
+
+- name: Install easy-rsa
+  become: yes
+  apt:
+    name: easy-rsa
+    state: present

@@ -14,6 +14,12 @@
         - locale
         - common
       when: locales_enabled | bool
+    - role: htop
+      become: true
+      tags:
+        - common
+        - htop
+      when: htop_enabled | bool
     - role: ufw
       become: true
       tags:

@@ -1,7 +1,6 @@
 ---
 
-- name: Install LibreOffice
-  apt: 
-    name: ['libreoffice', 'libreoffice-gnome']
-    state: latest 
-    
+- name: Install libreoffice
+  become: true
+  snap:
+    name: libreoffice
