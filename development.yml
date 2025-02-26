@@ -112,6 +112,14 @@
         - lens
         - development:editor
       when: lens_enabled | bool
+    - role: nvidia_docker
+      tags:
+        - nvidia-docker
+      when: nvidia_docker_enabled | bool
+    - role: nvidia_cuda
+      tags:
+        - nvidia-cuda
+      when: nvidia_cuda_enabled | bool
     - role: pycharm
       become: true
       tags:
