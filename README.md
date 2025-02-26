@@ -7,6 +7,7 @@ with some modifications to suit my needs.
 ## Usage
 First, you need to install Ansible :
 ```bash
+  sudo apt install pipx
   pipx install --include-deps ansible
 ```
 
