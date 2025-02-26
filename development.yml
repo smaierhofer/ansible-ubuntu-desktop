@@ -113,13 +113,15 @@
         - development:editor
       when: lens_enabled | bool
     - role: nvidia_docker
+      become: true
       tags:
         - nvidia-docker
       when: nvidia_docker_enabled | bool
-    - role: nvidia_cuda
+    - role: cuda
+      become: true
       tags:
-        - nvidia-cuda
-      when: nvidia_cuda_enabled | bool
+        - cuda
+      when: cuda_enabled | bool
     - role: pycharm
       become: true
       tags:
