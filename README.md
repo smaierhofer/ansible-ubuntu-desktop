@@ -13,8 +13,12 @@ First, you need to install Ansible :
 
 Customize `group_vars/local.yml`to suit your needs.
 All roles except `locales`,`common`, and `desktop` are disabled by default.
+If you want to install nvidia cuda (cuda), you need to install the following role first:
+```bash
+    ansible-galaxy role install andrewtwin.install_nvidia_cuda
+```
 
-Run
+To start the ansible playbook, run
 ```bash
   ansible-playbook ansible-desktop.yml --ask-become-pass
 ```
