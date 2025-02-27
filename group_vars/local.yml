@@ -58,7 +58,7 @@ nautilus_plugins_enabled:     no
 nextcloud_enabled:            yes
 noisetorch_enabled:           no
 nvidia_docker_enabled:        yes
-nvidia_cuda_enabled:          yes
+nvidia_cuda_enabled:          no
 openvpn_enabled:              yes
 pop_os_enabled:               no
 pop_os_shell_enabled:         no
