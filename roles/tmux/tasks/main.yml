@@ -1,6 +1,7 @@
 ---
 
 - name: Install tmux tool
-  apt:
+  become: true
+  snap:
     name: tmux
-    state: present
+    classic: true

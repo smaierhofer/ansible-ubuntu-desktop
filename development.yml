@@ -112,12 +112,12 @@
         - lens
         - development:editor
       when: lens_enabled | bool
-    - role: nvidia_docker
+    - role: nvidia-docker
       become: true
       tags:
         - nvidia-docker
       when: nvidia_docker_enabled | bool
-    - role: nvidia_cuda
+    - role: nvidia-cuda
       become: true
       tags:
         - nvidia-cuda
