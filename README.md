@@ -13,9 +13,8 @@ First, you need to install Ansible :
 
 Customize `group_vars/local.yml`to suit your needs.
 All roles except `locales`,`common`, and `desktop` are disabled by default.
-If you want to install nvidia cuda (cuda) and nvidia container toolkit (nvidia docker), you need to install the following role first:
+If you want to install the nvidia container toolkit (nvidia docker), you need to install the following role first:
 ```bash
-    ansible-galaxy role install andrewtwin.install_nvidia_cuda
     ansible-galaxy role install nvidia.nvidia_docker
 ```
 
@@ -132,8 +131,7 @@ However, you can also use `aws` and that should install all roles under the `aws
 | kubectl             | Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)                                                                                                                                                                            |
 | mysql-workbench     | Install [MySQL WorkBench](https://www.mysql.fr/products/workbench/) from online deb file                                                                                                                                                                              |
 | minikube            | Install [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)                                                                                                                                                                                          |
-| nvidia-docker       | Install [nvidia-docker ](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)                                                                                                                                                                                          |
-| nvidia-cuda         | Install [nvidia-cuda ](https://developer.nvidia.com/cuda-toolkit)                                                                                                                                                                                          |
+| nvidia-docker       | Install [nvidia-docker ](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)                                                                                                                                                                                          | |
 | snapd               | Install [snapd](https://snapcraft.io/snapd) a service that manages installed snaps (app packages for Linux)                                                                                                                                                           |
 | ssh                 | Install [OpenSSH Server](http://www.openssh.com/)                                                                                                                                                                                                                     |
 | terraform_landscape | Install [landscape](https://github.com/coinbase/terraform-landscape) a output reformatting tool for `terraform plan` thats easier to read                                                                                                                             | |
