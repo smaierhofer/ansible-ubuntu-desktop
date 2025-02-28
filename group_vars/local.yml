@@ -1,8 +1,8 @@
 ---
 
-common_enabled:  no
-locales_enabled: no
-desktop_enabled: no
+common_enabled:  yes
+locales_enabled: false
+desktop_enabled: yes
 
 angryipscanner_enabled:       no
 atom_enabled:                 no
