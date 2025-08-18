@@ -216,6 +216,12 @@
         - uv
         - development
       when: uv_enabled | bool
+    - role: poetry
+      become: true
+      tags:
+        - poetry
+        - development:python
+      when: poetry_enabled | bool
 #    - role: vokoscreen
 #      become: true
 #      tags:
