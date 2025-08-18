@@ -239,3 +239,8 @@
       tags:
         - zoom
       when: zoom_enabled | bool
+    - role: vlc
+      become: true
+      tags:
+        - vlc
+      when: vlc_enabled | bool

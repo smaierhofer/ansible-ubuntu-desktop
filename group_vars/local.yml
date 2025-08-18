@@ -94,11 +94,14 @@ ufw_enabled:                  no
 vagrant_enabled:              no
 virtualbox_enabled:           yes
 virtmanager_enabled:          no
+vlc_enabled:                  yes
 vscode_enabled:               yes
 vscodium_enabled:             no
 winbox_enabled:               no
 zsh_enabled:                  yes
 zoom_enabled:                 yes
+pre_commit_enabled:           yes
+uv_enabled:                   yes
 
 # http://docs.ansible.com/ansible/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
 aptcachetime: 3600

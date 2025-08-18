@@ -204,6 +204,18 @@
       tags:
         - zsh
       when: zsh_enabled | bool
+    - role: pre-commit
+      become: true
+      tags:
+        - pre-commit
+        - development
+      when: pre_commit_enabled | bool
+    - role: uv
+      become: true
+      tags:
+        - uv
+        - development
+      when: uv_enabled | bool
 #    - role: vokoscreen
 #      become: true
 #      tags:

@@ -7,3 +7,21 @@
     state: latest
     update_cache: true
     cache_valid_time: "{{ aptcachetime }}"
+
+- name: Install git-lfs repository
+  become: true
+  shell: curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+  args:
+    creates: /etc/apt/sources.list.d/github_git-lfs.list
+  tags:
+    - git
+
+- name: Install git-lfs
+  become: true
+  apt:
+    pkg: git-lfs
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ aptcachetime }}"
+  tags:
+    - git
