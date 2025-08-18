@@ -56,3 +56,4 @@ common:
     - libboost-all-dev
     - cppcheck
     - gcovr
+    - ffmpeg

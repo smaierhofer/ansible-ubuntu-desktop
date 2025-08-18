@@ -1,0 +1,9 @@
+---
+- name: Install uv using standalone installer script
+  become: true
+  shell: curl -LsSf https://astral.sh/uv/install.sh | sh
+  args:
+    creates: /usr/local/bin/uv
+  tags:
+    - uv
+

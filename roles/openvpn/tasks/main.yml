@@ -1,13 +1,25 @@
 ---
 
-- name: Install openvpn
+- name: Install OpenVPN and related client packages
   become: yes
   apt:
-    name: openvpn
-    state: present
+    name:
+      - network-manager-openvpn-gnome
+      - openconnect
+      - network-manager-openconnect
+      - network-manager-openconnect-gnome
+    state: latest
+    update_cache: yes
+  tags:
+    - openvpn
 
-- name: Install easy-rsa
+- name: Ensure /etc/openvpn exists
   become: yes
-  apt:
-    name: easy-rsa
-    state: present
+  file:
+    path: /etc/openvpn
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+  tags:
+    - openvpn

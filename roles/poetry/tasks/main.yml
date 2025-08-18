@@ -1,0 +1,17 @@
+---
+- name: Install Poetry using official installer
+  become: true
+  shell: curl -sSL https://install.python-poetry.org | python3 -
+  args:
+    creates: /usr/local/bin/poetry
+  tags:
+    - poetry
+
+- name: Ensure poetry binary is in /usr/local/bin
+  become: true
+  shell: cp $HOME/.local/bin/poetry /usr/local/bin/poetry
+  args:
+    creates: /usr/local/bin/poetry
+  tags:
+    - poetry
+

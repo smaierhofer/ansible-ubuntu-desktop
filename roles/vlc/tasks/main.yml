@@ -1,0 +1,9 @@
+---
+- name: Install VLC via snap
+  become: true
+  command: snap install vlc
+  args:
+    creates: /snap/bin/vlc
+  tags:
+    - vlc
+
