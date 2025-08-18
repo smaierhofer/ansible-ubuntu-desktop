@@ -57,7 +57,7 @@ mysql_workbench_enabled:      no
 nautilus_plugins_enabled:     no
 nextcloud_enabled:            yes
 noisetorch_enabled:           no
-nvidia_docker_enabled:        yes
+nvidia_docker_enabled:        no
 openvpn_enabled:              yes
 poetry_enabled:               yes
 pop_os_enabled:               no
@@ -72,7 +72,7 @@ rust_enabled:                 yes
 scribus_enabled:              no
 shutter_enabled:              no
 signal_enabled:               no
-skype_enabled:                yes
+skype_enabled:                no
 slack_enabled:                yes
 shotcut_enabled:              yes
 spotify_enabled:              yes
